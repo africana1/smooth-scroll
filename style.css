@@ -1,0 +1,152 @@
+@import url('fonts.css');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* native browser without smooth scroll */
+body {
+  font-family: 'Prata', serif;
+  background: #333;
+  color: #fff;
+  line-height: 1.6;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* with smooth scroll script*/
+/* body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #333;
+  color: #fff;
+  line-height: 1.6;
+  height: 100vh;
+} */
+
+/* native browser without smooth scroll */
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+/* with smooth scroll script*/
+/* .container {
+  width: 100%;
+  height: 100%;
+} */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: center;
+}
+.navbar ul li {
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f4f4f4;
+}
+
+.navbar ul li a:hover {
+  color: skyblue;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+section h1 {
+  font-size: 2rem;
+}
+
+section p {
+  font-size: 1.2rem;
+}
+
+/* Section images */
+section#home {
+  background: url('/img/image1.jpg') no-repeat center center/cover;
+}
+
+section#about {
+  background: url('/img/image2.jpg') no-repeat center center/cover;
+}
+
+section#service {
+  background: url('/img/image3.jpg') no-repeat center center/cover;
+}
+
+section#contact {
+  background: url('/img/image4.jpg') no-repeat center center/cover;
+}
+
+section#home h1 {
+  position: relative;
+  top: -200px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  width: 600px;
+}
+
+section#home div {
+  position: relative;
+  top: -190px;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgb(221, 221, 52);
+  border-radius: 10px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  width: 40%;
+}
+
+section#about h3 {
+  position: relative;
+  top: 200px;
+  background: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  width: 400px;
+}
+
+section#service div {
+  position: relative;
+  top: -210px;
+  background: rgba(0, 0, 0, 0.95);
+  border-radius: 10px;
+  width: 85%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+section#contact div {
+  position: relative;
+  top: 290px;
+  background: rgba(0, 0, 0, 0.98);
+  border-radius: 10px;
+  width: 45%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
